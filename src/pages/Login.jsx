@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useNavigate } from "react-router"; 
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router"; 
 import axios from "axios";
 import Logo from "../components/Logo";
 import Swal from 'sweetalert2';
@@ -11,6 +11,21 @@ const Login = () => {
   const [errorMsg, setErrorMsg] = useState("");
   
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // alert for unauthorized access
+  useEffect(() => {
+    if (location.state?.showLoginAlert) {
+      Swal.fire({
+        title: "Access Denied!",
+        text: "Please login first to access the dashboard.",
+        icon: "warning",
+        confirmButtonColor: "#045544",
+      });
+      
+      navigate(location.pathname, { replace: true });
+    }
+  }, [location, navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
