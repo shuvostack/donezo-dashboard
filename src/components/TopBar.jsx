@@ -2,14 +2,14 @@ import { FiSearch, FiMail, FiBell } from "react-icons/fi";
 
 const TopBar = () => {
   return (
-    <div className="h-[88px] flex items-center justify-between px-10 bg-[#F4F7F6]">
+    <div className="h-[88px] flex items-center justify-between px-10 bg-[#F4F7F6] mt-5 mb-5 ml-4 mr-4 rounded-2xl">
       {/* search bar */}
       <div className="relative w-[380px]">
         <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg" />
         <input
           type="text"
           placeholder="Search task"
-          className="w-full pl-11 pr-12 py-3 bg-[#EAEFEF] border-none rounded-full focus:outline-none focus:ring-2 focus:ring-[#045544]/20 text-sm text-gray-700 placeholder-gray-400"
+          className="w-full pl-11 pr-12 py-3 bg-white border-none rounded-full focus:outline-none focus:ring-2 focus:ring-[#045544]/20 text-sm text-gray-700 placeholder-gray-400"
         />
         <div className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-white text-gray-500 text-[10px] font-bold px-2 py-1 rounded shadow-sm">
           ⌘F

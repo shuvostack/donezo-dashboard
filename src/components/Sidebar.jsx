@@ -9,7 +9,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-[260px] bg-white h-screen flex flex-col justify-between py-8 sticky top-0 shadow-[2px_0_8px_rgba(0,0,0,0.02)]">
+    <div className="w-[260px] bg-[#F4F7F6] h-screen flex flex-col justify-between py-8 sticky top-0 shadow-[2px_0_8px_rgba(0,0,0,0.02)] mt-5 ml-4 rounded-2xl">
       <div>
         {/* logo */}
         <div className="px-8 mb-12 flex items-center gap-3">
