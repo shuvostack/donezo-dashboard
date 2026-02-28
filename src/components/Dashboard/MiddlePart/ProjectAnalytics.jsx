@@ -42,16 +42,16 @@ const ProjectAnalytics = () => {
   return (
     <motion.div 
         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-        className="lg:col-span-2 bg-white rounded-[24px] p-7 shadow-sm border border-gray-100 h-[280px]"
+        className="lg:col-span-2 bg-white rounded-[24px] p-5 sm:p-7 shadow-sm border border-gray-100 h-[280px]"
       >
         <h3 className="font-bold text-gray-900 mb-6 text-[17px]">Project Analytics</h3>
         
-        <div className="h-[180px] flex items-end justify-between px-2 pb-2 relative">
+        <div className="h-[180px] flex items-end justify-between px-1 md:px-2 pb-2 relative">
           {isLoading ? (
             <div className="w-full h-full flex items-center justify-center text-gray-400">Loading chart...</div>
           ) : (
             chartBars.map((bar, i) => (
-              <div key={i} className="flex flex-col items-center justify-end h-full gap-3 group relative w-12">
+              <div key={i} className="flex flex-col items-center justify-end h-full gap-2 md:gap-3 group relative">
                 
                 {/* Tooltip */}
                 {!bar.isStriped && (
@@ -67,13 +67,13 @@ const ProjectAnalytics = () => {
                     backgroundColor: bar.bgColor,
                     backgroundImage: bar.isStriped ? 'repeating-linear-gradient(-45deg, transparent, transparent 3px, #cbd5e1 3px, #cbd5e1 5px)' : 'none'
                   }}
-                  className={`w-11 rounded-full transition-all duration-500 hover:scale-[1.03] cursor-pointer ${
+                  className={`w-7 sm:w-9 md:w-11 rounded-full transition-all duration-500 hover:scale-[1.03] cursor-pointer ${
                     bar.isStriped ? "border-2 border-gray-300" : "shadow-sm"
                   }`}
                 ></div>
                 
                 {/* x-axis label */}
-                <span className="text-[13px] font-bold text-gray-400 uppercase tracking-wide">{bar.day}</span>
+                <span className="text-[11px] md:text-[13px] font-bold text-gray-400 uppercase tracking-wide">{bar.day}</span>
               </div>
             ))
           )}
