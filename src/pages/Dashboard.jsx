@@ -1,23 +1,26 @@
 import Sidebar from "../components/Dashboard/BarItems/Sidebar";
 import TopBar from "../components/Dashboard/BarItems/TopBar";
 import StatsCards from "../components/Dashboard/FirstPart/StatsCards";
-
 import ProjectAnalytics from "../components/Dashboard/MiddlePart/ProjectAnalytics";
 import Reminders from "../components/Dashboard/MiddlePart/Reminders";
 import ProjectList from "../components/Dashboard/MiddlePart/Plan";
 import TeamCollaboration from "../components/Dashboard/BottomPart/TeamCollaboration";
 import ProjectProgress from "../components/Dashboard/BottomPart/ProjectProgress";
 import TimeTracker from "../components/Dashboard/BottomPart/TimeTracker";
+import { useState } from "react";
 
 const Dashboard = () => {
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <div className="flex min-h-screen bg-white font-sans">
       <div>
-        <Sidebar />
+        <Sidebar isOpen={isSidebarOpen} onCloseSidebar={() => setIsSidebarOpen(false)} />
       </div>
       <div className="flex-1 flex flex-col">
         <div className="">
-          <TopBar />
+          <TopBar onOpenSidebar={() => setIsSidebarOpen(true)} />
         </div>
 
         <div className="px-10 py-8 overflow-y-auto bg-[#F4F7F6] ml-4 mr-4 mb-5 rounded-2xl">
