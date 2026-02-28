@@ -2,6 +2,7 @@ import Sidebar from "../components/Sidebar";
 import TopBar from "../components/TopBar";
 import StatsCards from "../components/StatsCards";
 import MiddleSection from "../components/MiddleSection";
+import BottomSection from "../components/BottomPart/BottomSection";
 
 const Dashboard = () => {
   return (
@@ -33,6 +34,7 @@ const Dashboard = () => {
 
           <StatsCards></StatsCards>
           <MiddleSection></MiddleSection>
+          <BottomSection></BottomSection>
         </div>
       </div>
     </div>
