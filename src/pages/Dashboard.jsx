@@ -15,7 +15,7 @@ const Dashboard = () => {
           <TopBar />
         </div>
 
-        <div className="px-10 py-8 overflow-y-auto bg-[#F4F7F6] ml-4 mr-4 rounded-2xl">
+        <div className="px-10 py-8 overflow-y-auto bg-[#F4F7F6] ml-4 mr-4 mb-5 rounded-2xl">
           {/* title and btn */}
           <div className="flex justify-between items-end mb-8">
             <div>
