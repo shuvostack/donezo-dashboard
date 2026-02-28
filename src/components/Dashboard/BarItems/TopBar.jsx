@@ -19,13 +19,16 @@ const TopBar = () => {
       {/* right side icons */}
       <div className="flex items-center gap-6">
         <div className="flex items-center gap-2">
-          <button className="w-10 h-10 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-200 transition-colors">
+          <div className="w-10 h-10 rounded-full bg-white">
+            <button className="w-10 h-10 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-200 transition-colors cursor-pointer">
             <FiMail className="text-[20px]" />
-          </button>
-          <button className="relative w-10 h-10 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-200 transition-colors">
+            </button>
+          </div>
+          <div className="w-10 h-10 rounded-full bg-white">
+            <button className="relative w-10 h-10 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-200 transition-colors cursor-pointer">
             <FiBell className="text-[20px]" />
-            <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-red-500 rounded-full border border-[#F4F7F6]"></span>
-          </button>
+            </button>
+          </div>
         </div>
 
         {/* user profile */}

@@ -5,7 +5,6 @@ const ProjectProgress = () => {
   const [completed, setCompleted] = useState(0);
   const [inProgress, setInProgress] = useState(0);
 
-  
   useEffect(() => {
     const timer = setTimeout(() => {
       setCompleted(41);   
@@ -14,13 +13,12 @@ const ProjectProgress = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // half-circle 
   const halfCirclePath = "M 10 100 A 90 90 0 0 1 190 100";
 
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-      className="lg:col-span-1 bg-white rounded-[24px] p-7 shadow-sm border border-gray-100 flex flex-col items-center"
+      className="bg-white rounded-[24px] p-7 shadow-sm border border-gray-100 flex flex-col items-center h-full"
     >
       <h3 className="font-bold text-gray-900 text-[17px] w-full text-left mb-6">Project Progress</h3>
       
@@ -33,7 +31,7 @@ const ProjectProgress = () => {
           </defs>
           <path d={halfCirclePath} fill="none" stroke="url(#stripes)" strokeWidth="20" strokeLinecap="round" />
           
-          {/* In Progress */}
+          {/* in progress */}
           <motion.path 
             d={halfCirclePath} 
             fill="none" 
@@ -45,7 +43,7 @@ const ProjectProgress = () => {
             transition={{ duration: 1.5, ease: "easeOut" }}
           />
           
-          {/* Completed */}
+          {/* completed */}
           <motion.path 
             d={halfCirclePath} 
             fill="none" 

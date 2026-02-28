@@ -36,16 +36,17 @@ const TeamCollaboration = () => {
   return (
     <motion.div 
       initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-      className="lg:col-span-2 bg-white rounded-[24px] p-7 shadow-sm border border-gray-100"
+      className="bg-white rounded-[24px] p-7 shadow-sm border border-gray-100 h-full flex flex-col"
     >
       <div className="flex justify-between items-center mb-6">
         <h3 className="font-bold text-gray-900 text-[17px]">Team Collaboration</h3>
-        <button className="text-[#045544] border border-gray-200 px-4 py-1.5 rounded-full text-[12px] font-bold flex items-center gap-1 hover:border-[#045544] transition-colors">
+        <button className="text-[#045544] border border-gray-200 px-4 py-1.5 rounded-full text-[12px] font-bold flex items-center gap-1 hover:border-[#045544] transition-colors cursor-pointer">
           + Add Member
         </button>
       </div>
 
-      <div className="flex flex-col gap-4">
+      
+      <div className="flex flex-col gap-4 flex-1 justify-between mt-2">
         {isLoading ? (
           <div className="text-sm text-gray-400 text-center py-4">Loading team data...</div>
         ) : (

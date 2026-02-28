@@ -50,7 +50,7 @@ const StatsCards = () => {
           transition={{ duration: 0.4, delay: index * 0.1 }}
           className={`relative p-6 rounded-[24px] shadow-sm ${
             card.isActive 
-              ? "bg-gradient-to-bl from-[#023b2e] via-[#045544] to-[#0c9664] text-white border-none" 
+              ? "bg-gradient-to-br from-[#023b2e] via-[#045544] to-[#0c9664] text-white border-none" 
               : "bg-white text-gray-900 border border-gray-100"
           }`}
         >
@@ -81,7 +81,9 @@ const StatsCards = () => {
             <div className={`px-1.5 py-0.5 rounded flex items-center gap-1 ${card.isActive ? "bg-white/20 text-white" : "bg-gray-100 text-gray-500"}`}>
               {card.subIcon}
             </div>
-            {card.subText}
+            <div className="text-[#0c9664]">
+                {card.subText}
+            </div>
           </div>
         </motion.div>
       ))}

@@ -10,7 +10,8 @@ const Sidebar = () => {
 
   return (
     <div className="w-[260px] bg-[#F4F7F6] h-screen flex flex-col justify-between py-8 sticky top-0 shadow-[2px_0_8px_rgba(0,0,0,0.02)] mt-5 ml-4 mb-5 rounded-2xl">
-      <div>
+      
+      <div className="overflow-y-auto overflow-x-hidden">
         {/* logo */}
         <div className="px-8 mb-12 flex items-center gap-3">
           <div className="w-8 h-8 rounded-full border-[4px] border-[#045544] flex items-center justify-center">
@@ -65,6 +66,34 @@ const Sidebar = () => {
           </nav>
         </div>
       </div>
+
+      {/* download mobile app */}
+      <div className="px-6 mt-6">
+        <div className="bg-gradient-to-br from-[#023b2e] via-[#045544] to-[#0c9664] rounded-2xl p-5 text-white relative overflow-hidden shadow-md">
+          
+          <div className="absolute top-0 right-0 w-24 h-24 bg-white opacity-5 rounded-full -mr-10 -mt-10 blur-xl"></div>
+          <div className="absolute bottom-0 left-0 w-20 h-20 bg-[#0bd993] opacity-10 rounded-full blur-2xl"></div>
+          
+          <div className="relative z-10">
+            {/* Icon */}
+            <div className="w-7 h-7 bg-white/10 rounded-full flex items-center justify-center mb-3 backdrop-blur-sm border border-white/10">
+              <div className="w-3.5 h-3.5 rounded-full border-[2px] border-white flex items-center justify-center">
+                <div className="w-1 h-1 bg-white rounded-full"></div>
+              </div>
+            </div>
+            
+            <h4 className="font-bold text-[14px] leading-tight mb-1 tracking-wide">
+              Download our<br/>Mobile App
+            </h4>
+            <p className="text-[9px] text-green-100/70 mb-4 font-medium">Get easy in another way</p>
+            
+            <button className="w-full py-2.5 bg-[#049673] hover:bg-[#0bd993] hover:text-[#045544] transition-colors rounded-xl text-[11px] font-bold shadow-sm">
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };
